@@ -2,7 +2,7 @@ async function sendEmailAddressAPI(emailAddress) {
   const data = {
     'emailAddress': emailAddress
   };
-  const response = await fetch('https://landing-page-email-address-input-fmdaixa45q-el.a.run.app', {
+  const response = await fetch('https://landing-page-email-address-input-fmdaixa45q-el.a.run.app/add-email-address', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -13,6 +13,7 @@ async function sendEmailAddressAPI(emailAddress) {
 }
 
 async function handleSubmit() {
+  emailAddressInput = document.getElementById('emailAddress');
   sendEmailAddressAPI("pungiman97@gmail.com").then((data) => {
     console.log(data);
   });
