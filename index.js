@@ -16,7 +16,7 @@ async function sendEmailAddressAPI(emailAddress) {
 
 async function handleSubmit() {
   emailAddressInput = document.getElementById('emailAddress');
-  sendEmailAddressAPI("pungiman97@gmail.com").then((data) => {
+  sendEmailAddressAPI(emailAddressInput.value).then((data) => {
     console.log(data);
   });
 }
