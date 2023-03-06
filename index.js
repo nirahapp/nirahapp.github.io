@@ -11,12 +11,16 @@ async function sendEmailAddressAPI(emailAddress) {
     },
     body: 'emailAddress=' + emailAddress,
   });
-  return response.json();
+  return response;
 }
 
 async function handleSubmit() {
   emailAddressInput = document.getElementById('emailAddress');
   sendEmailAddressAPI(emailAddressInput.value).then((data) => {
+    emailForm = document.getElementById("email-form");
+    thankYou = document.getElementById("submission-thank-you");
+    emailForm.className = "hidden";
+    thankYou.className = "block text-center";
     console.log(data);
   });
 }
