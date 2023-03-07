@@ -44,5 +44,5 @@ Sending webhooks should have been easy, after all, it’s just an HTTP request w
 10. Fine-grained user permissions
 11. and many more
 
-I want to build something which works for **YOU**, and I want to give you a chance to participate in shaping the features which are built, and what else can be done to make your life easier.
+I want to build something which works for **YOU**, and I want to give you a chance to participate in shaping the features which are built, and understand what else can be done to make your life easier.
 
