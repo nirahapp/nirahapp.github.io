@@ -57,6 +57,18 @@ has to be communicated to the receiver in some or the other way? If your
 webhooks are as critical as payment credit alerts, you wouldn’t want
 inconsistent payment states in different systems, right?</li>
 </ol>
+	<div id="form-submission">
+		<div id="email-form" class="flex flex-col gap-3 md:flex-row md:gap-6 md:justify-center">
+			<label name="emailAddress" class="p-1 text-center">Get Started</label>
+			<input type="email" id="email-address-input" name="emailAddress" class="rounded-lg py-0.5 px-2 place-self-center w-3/4 sm:w-1/2 bg-stone-600 outline placeholder:italic placeholder-gray-400" placeholder="Enter your email" autocomplete="on">
+			<div class="place-self-center">
+				<input id="email-submit-button" disabled type="submit" value="Yes, please!" class="leading-6 rounded-lg p-2 bg-gray-100 hover:outline-none" onclick="handleSubmit()">
+			</div>
+		</div>
+		<div id="submission-thank-you" class="hidden">
+			<p><i>Thank you for the submission!</i></p>
+		</div>
+	</div>
 <blockquote>
 <p>Our founder, <a
 href="https://www.linkedin.com/in/pranitbauva/">Pranit Bauva</a>, is on
@@ -98,18 +110,6 @@ safety</strong></li>
 want to give you a chance to participate in shaping the features which
 are built, and understand what else can be done to make your life
 easier.</p>
-			<div id="form-submission">
-				<div id="email-form" class="flex flex-col gap-3 md:flex-row md:gap-6 md:justify-center">
-					<label name="emailAddress" class="p-1 text-center">Get Started</label>
-					<input type="email" id="email-address-input" name="emailAddress" class="rounded-lg py-0.5 px-2 text-center place-self-center w-3/4 sm:w-1/2 bg-stone-600 outline placeholder:italic placeholder-gray-400" placeholder="bauva@nirah.app" autocomplete="on">
-					<div class="place-self-center">
-						<input id="email-submit-button" disabled type="submit" value="Yes, please!" class="leading-6 rounded-lg p-2 bg-gray-700 hover:outline hover:outline-gray-500" onclick="handleSubmit()">
-					</div>
-				</div>
-				<div id="submission-thank-you" class="hidden">
-					<p><i>Thank you for the submission!</i></p>
-				</div>
-			</div>
 		</article>
 	</body>
 	<!-- Google tag (gtag.js) -->
@@ -117,7 +117,5 @@ easier.</p>
 	<script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-SGKHYSCW5V');</script>
 	<script src="index.js"></script>
   <script>
-    let emailAddressInput = document.getElementById('email-address-input');
-    emailAddressInput.addEventListener("change", handleEmailSubmit);
   </script>
 </html>
